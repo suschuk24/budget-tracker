@@ -40,17 +40,17 @@
         "type": "image/png"
       },
       {
-        "src": "icons/icon-512x512.png",
+        "src": "icons/splash-screen.png",
         "sizes": "512x512",
         "type": "image/png"
       }
 
     ],
-    "name": "Budgget Tracker",
+    "name": "Budget Tracker",
     "short_name": "Budgetr",
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": ".",
+    "start_url": "/",
     "description": "An app that allows you to track spending in realtime, whether online or offline",
     "background_color": "#01579b",
     "theme_color": "#ffffff"
