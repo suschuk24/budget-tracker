@@ -25,14 +25,23 @@ Giving users a fast and easy way to track their money is important, but allowing
 
 - [This Repository](https://github.com/suschuk24/budget-tracker)
 
+- [Deployed Application](https://budget-tracker-106.herokuapp.com/)
+
 
 ## Screenshots
+
 ### Initial Lighthouse Score before refactor
 ![Initial Lighthouse Score](public/images/initial-lighthouse-score.jpg)
+
 ### Final Ligthouse metrics after refactor
 ![Final Lighthouse Score Overall](public/images/final-lighthouse-score.jpg)
+
 ### Final Ligthouse PWA Score
 ![Final Lighthouse Score PWA](public/images/final-lighthouse-pwa.jpg)
+
+### PWA Screenshot
+![PWA Screenshot](public/images/pwa-screenshot.jpg)
+
 ## User Story: 
 
 * AS AN avid traveler
