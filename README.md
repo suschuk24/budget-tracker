@@ -12,6 +12,7 @@ Giving users a fast and easy way to track their money is important, but allowing
 - [Repository](#repository)
 - [Walkthrough Video](#walkthrough%20video)
 - [Screenshots](#screenshots)
+- [Service Worker Details](#Service%20Worker%20Details)
 - [User Story](#user%20story)
 - [Acceptance Criteria](#Acceptance%20criteria)
 - [Contributions](#contributing)
@@ -33,14 +34,29 @@ Giving users a fast and easy way to track their money is important, but allowing
 ### Initial Lighthouse Score before refactor
 ![Initial Lighthouse Score](public/images/initial-lighthouse-score.jpg)
 
-### Final Ligthouse metrics after refactor
+### Final Lighthouse metrics after refactor
 ![Final Lighthouse Score Overall](public/images/final-lighthouse-score.jpg)
 
-### Final Ligthouse PWA Score
+### Final Lighthouse PWA Score
 ![Final Lighthouse Score PWA](public/images/final-lighthouse-pwa.jpg)
 
 ### PWA Screenshot
 ![PWA Screenshot](public/images/pwa-screenshot.jpg)
+
+## Service Worker Details:
+- When caching files for offline functionality, it is important to keep in mind which files to cache, and which to allow not to render for a usable MVP. In a simple application, the developer may be enticed to include all files. HOwever, upon scaling, that can cause unforeseen performance issues. 
+
+- Generally, it is a good idea to prioritize JavaScript files, HTML files and CSS files so that in worse case scenario, the application still functions with a basic user experience. 
+
+* Files Cached for this application:
+``` JavaScript
+const FILES_TO_CACHE = [
+    "./index.html",
+    "./css/styles.css",
+    "./js/index.js",
+    "./js/idb.js"
+];
+```
 
 ## User Story: 
 
@@ -54,7 +70,7 @@ Giving users a fast and easy way to track their money is important, but allowing
 * WHEN the user inputs an expense or deposit
 * THEN they will receive a notification that they have added an expense or deposit
 * WHEN the user reestablishes an internet connection
-* THEN the deposits or expenses added while they were offline are added to their transaction history and their totals are updatedt
+* THEN the deposits or expenses added while they were offline are added to their transaction history and their totals are updated
 
 ## License:
 For more information about licenses, please visit:
@@ -78,6 +94,7 @@ Testing completed using InsomniaCore, Optimized using Chrome DevTools and Lighth
 * Node
 * Express
 * Mongoose
+
 
 
 ## Questions:
