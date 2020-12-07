@@ -44,7 +44,7 @@ Giving users a fast and easy way to track their money is important, but allowing
 ![PWA Screenshot](public/images/pwa-screenshot.jpg)
 
 ## Service Worker Details:
-- When caching files for offline functionality, it is important to keep in mind which files to cache, and which to allow not to render for a usable MVP. In a simple application, the developer may be enticed to include all files. HOwever, upon scaling, that can cause unforeseen performance issues. 
+- When caching files for offline functionality, it is important to keep in mind which files to cache, and which to allow not to render for a usable MVP. In a simple application, the developer may be enticed to include all files. However, upon scaling, that can cause unforeseen performance issues. 
 
 - Generally, it is a good idea to prioritize JavaScript files, HTML files and CSS files so that in worse case scenario, the application still functions with a basic user experience. 
 
@@ -57,7 +57,20 @@ const FILES_TO_CACHE = [
     "./js/idb.js"
 ];
 ```
+In this application, I also used IndexDB for offline persistance, which stores user submissions, and saves them until regaining a stable internet connection. 
 
+- Fetch Post Method Used to send info back to DB
+- Note: This is within an ```if()``` statement, that is nested inside of a larger ```onSuccess()``` function. See 
+this [IndexDB JS File ](public/js/idb.js) for the full code 
+``` JavaScript
+fetch('/api/transaction', {
+    method: 'POST',
+    body: JSON.stringify(getAll.result),
+    headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+    }
+```
 ## User Story: 
 
 * AS AN avid traveler
